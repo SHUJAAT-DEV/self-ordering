@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap");
+.location-action {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .primary-button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }

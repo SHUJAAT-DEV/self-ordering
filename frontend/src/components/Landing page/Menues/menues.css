@@ -1,0 +1,164 @@
+.main-menu-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.ant-card-body {
+  padding: 10px !important;
+}
+.slider-container {
+  width: 70%;
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.slider-heading {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider-heading h2 {
+  color: #fff;
+}
+.slider-description {
+  color: #fff;
+}
+.slider-image {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.slider-button {
+  background-color: #ff5f61;
+}
+.rightContiner {
+  width: 50vw;
+  height: 70%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: rgba(1, 0, 1, 0.2) 0px 1px 4px;
+  overflow: hidden;
+}
+.heroContainer {
+  display: flex;
+  gap: 5%;
+  margin: 0 auto;
+  padding-top: 4%;
+  flex: 1 1 20%;
+}
+.catagories .catagoryNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.specialMenueList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4%;
+}
+.pizza {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.pizzaTitle.pizzaTitle {
+  font-size: 14px;
+}
+.pizza .pizza-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.bryani {
+  width: 98px;
+  height: 98px;
+  border-radius: 10px;
+  text-align: center;
+}
+.bryani .bryani-title {
+  align-items: center;
+}
+.bryani-title:hover {
+  color: #fff;
+}
+.bryani:hover {
+  background-color: #ff5f61;
+}
+.card-img {
+  width: 50px;
+  /* border-radius: 30px; */
+}
+.heroContainer .catagories .CatagoryCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+}
+.cardPrice {
+  display: inline;
+  font-size: 14px;
+  font-weight: 600;
+  /* color: #ff5f61; */
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardFooter p {
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.menue-button {
+  width: auto;
+  padding: 4px 10px;
+  background-color: transparent;
+  border: 1px solid #ff5f61;
+  color: #ff5f61;
+  transition: background-color 0.3s, color 0.3s;
+}
+.menueCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4%;
+}
+.catagories .menueCardContainer .menueBryani {
+  padding-top: 10px;
+}
+.card {
+  padding-top: 30px;
+}
+.menu-card {
+  transition: transform 0.9s;
+  box-shadow: rgba(1, 0, 1, 0.2) 0px 1px 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

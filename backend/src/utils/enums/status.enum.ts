@@ -1,0 +1,5 @@
+export enum GAME_STATUS {
+  ACTIVE = "ACTIVE",
+  SOLDOUT = "SOLDOUT",
+  CONFIRM = "CONFIRM"
+}

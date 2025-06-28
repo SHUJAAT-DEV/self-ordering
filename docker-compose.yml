@@ -1,0 +1,51 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-net
+    ports:
+      - "6543:5432"
+
+  backend:
+    build: ./backend
+    container_name: nest-backend
+    depends_on:
+      - postgres
+    restart: always
+    environment:
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USER: myuser
+      DATABASE_PASSWORD: mypassword
+      DATABASE_NAME: mydatabase
+    networks:
+      - app-net
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build: ./frontend
+    container_name: react-frontend
+    depends_on:
+      - backend
+    restart: always
+    ports:
+      - "8080:80"
+    networks:
+      - app-net
+
+volumes:
+  postgres_data:
+
+networks:
+  app-net:

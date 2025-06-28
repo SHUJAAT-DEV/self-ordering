@@ -1,0 +1,27 @@
+
+.heroContainer{
+    background-color: #F7F7F9;
+  }
+  .home-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* background-color: #fff; */
+      background-color: #F7F7F9;
+    }
+    .home-header .left-componet{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .home-title {
+      color: #fff;
+      margin: 0;
+      margin-right: 20px;
+    }
+    
+    .home-search-input {
+      width: 200px;
+      height: 30px;
+    }
+    
