@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plate -->
+  <ellipse cx="100" cy="160" rx="85" ry="30" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Chicken breast -->
+  <ellipse cx="100" cy="130" rx="45" ry="25" fill="#fbbf24" transform="rotate(-15 100 130)"/>
+  <path d="M70 120 Q80 110 110 115 Q140 120 145 135 Q140 150 110 155 Q80 150 70 120z" fill="#f59e0b"/>
+  
+  <!-- Grill marks -->
+  <line x1="75" y1="125" x2="135" y2="135" stroke="#92400e" stroke-width="2" opacity="0.8"/>
+  <line x1="75" y1="135" x2="135" y2="145" stroke="#92400e" stroke-width="2" opacity="0.8"/>
+  <line x1="80" y1="115" x2="140" y2="125" stroke="#92400e" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Herbs (rosemary) -->
+  <line x1="50" y1="125" x2="65" y2="120" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="52" cy="124" r="1" fill="#22c55e"/>
+  <circle cx="55" cy="122" r="1" fill="#22c55e"/>
+  <circle cx="58" cy="121" r="1" fill="#22c55e"/>
+  <circle cx="61" cy="120" r="1" fill="#22c55e"/>
+  <circle cx="64" cy="119" r="1" fill="#22c55e"/>
+  
+  <!-- Lemon wedge -->
+  <path d="M140 145 Q150 140 155 150 Q150 160 140 155 Q135 150 140 145z" fill="#fde047"/>
+  <path d="M140 145 Q145 150 155 150 Q150 155 140 155z" fill="#facc15"/>
+  <line x1="140" y1="148" x2="155" y2="148" stroke="#eab308" stroke-width="1"/>
+  <line x1="142" y1="152" x2="153" y2="152" stroke="#eab308" stroke-width="1"/>
+  
+  <!-- Side vegetables -->
+  <circle cx="60" cy="150" r="6" fill="#16a34a"/>
+  <circle cx="70" cy="155" r="6" fill="#22c55e"/>
+  <circle cx="80" cy="160" r="6" fill="#15803d"/>
+  
+  <!-- Carrots -->
+  <ellipse cx="135" cy="160" rx="8" ry="3" fill="#ea580c" transform="rotate(30 135 160)"/>
+  <ellipse cx="145" cy="155" rx="8" ry="3" fill="#dc2626" transform="rotate(45 145 155)"/>
+</svg>

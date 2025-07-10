@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plate -->
+  <ellipse cx="100" cy="160" rx="85" ry="30" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Mozzarella Sticks -->
+  <rect x="60" y="130" width="25" height="8" rx="4" fill="#fbbf24"/>
+  <rect x="90" y="125" width="25" height="8" rx="4" fill="#f59e0b"/>
+  <rect x="120" y="130" width="25" height="8" rx="4" fill="#fbbf24"/>
+  <rect x="75" y="145" width="25" height="8" rx="4" fill="#f59e0b"/>
+  <rect x="105" y="140" width="25" height="8" rx="4" fill="#fbbf24"/>
+  
+  <!-- Breading texture -->
+  <circle cx="65" cy="132" r="1" fill="#d97706"/>
+  <circle cx="70" cy="134" r="1" fill="#d97706"/>
+  <circle cx="75" cy="132" r="1" fill="#d97706"/>
+  <circle cx="80" cy="134" r="1" fill="#d97706"/>
+  
+  <circle cx="95" cy="127" r="1" fill="#d97706"/>
+  <circle cx="100" cy="129" r="1" fill="#d97706"/>
+  <circle cx="105" cy="127" r="1" fill="#d97706"/>
+  <circle cx="110" cy="129" r="1" fill="#d97706"/>
+  
+  <!-- Melted cheese -->
+  <ellipse cx="85" cy="135" rx="3" ry="2" fill="#fef3c7"/>
+  <ellipse cx="115" cy="132" rx="3" ry="2" fill="#fde68a"/>
+  <ellipse cx="100" cy="148" rx="3" ry="2" fill="#fef3c7"/>
+  
+  <!-- Marinara sauce bowl -->
+  <ellipse cx="150" cy="155" rx="12" ry="6" fill="#f8fafc"/>
+  <ellipse cx="150" cy="153" rx="10" ry="4" fill="#dc2626"/>
+  <circle cx="147" cy="152" r="1" fill="#b91c1c"/>
+  <circle cx="152" cy="153" r="1" fill="#ef4444"/>
+  
+  <!-- Steam lines -->
+  <path d="M70 125 Q72 115 70 110" stroke="#9ca3af" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M100 120 Q102 110 100 105" stroke="#9ca3af" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M130 125 Q132 115 130 110" stroke="#9ca3af" stroke-width="1" fill="none" opacity="0.6"/>
+</svg>

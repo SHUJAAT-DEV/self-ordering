@@ -1,0 +1,26 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plate -->
+  <ellipse cx="100" cy="160" rx="85" ry="30" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Wings -->
+  <path d="M60 130 Q50 120 70 115 Q90 110 100 125 Q95 140 80 145 Q65 150 60 130z" fill="#d97706"/>
+  <path d="M100 125 Q110 115 130 120 Q150 125 155 140 Q150 155 130 160 Q110 155 100 125z" fill="#ea580c"/>
+  <path d="M80 145 Q70 135 90 130 Q110 125 120 140 Q115 155 100 160 Q85 165 80 145z" fill="#f97316"/>
+  <path d="M120 140 Q130 130 150 135 Q170 140 175 155 Q170 170 150 175 Q130 170 120 140z" fill="#fb923c"/>
+  
+  <!-- Buffalo sauce coating -->
+  <path d="M65 125 Q70 120 85 125 Q90 130 85 135 Q75 140 65 125z" fill="#dc2626" opacity="0.8"/>
+  <path d="M110 120 Q125 115 140 125 Q145 135 135 140 Q120 145 110 120z" fill="#ef4444" opacity="0.8"/>
+  <path d="M85 140 Q100 135 115 145 Q120 155 105 160 Q90 155 85 140z" fill="#f87171" opacity="0.8"/>
+  <path d="M135 135 Q150 130 165 140 Q170 150 155 155 Q140 160 135 135z" fill="#dc2626" opacity="0.8"/>
+  
+  <!-- Blue cheese dip -->
+  <ellipse cx="140" cy="170" rx="15" ry="8" fill="#f1f5f9"/>
+  <circle cx="135" cy="168" r="2" fill="#3b82f6"/>
+  <circle cx="142" cy="170" r="2" fill="#60a5fa"/>
+  <circle cx="138" cy="172" r="1.5" fill="#2563eb"/>
+  
+  <!-- Celery stick -->
+  <rect x="45" y="160" width="4" height="25" fill="#16a34a"/>
+  <ellipse cx="47" cy="158" rx="3" ry="2" fill="#22c55e"/>
+</svg>

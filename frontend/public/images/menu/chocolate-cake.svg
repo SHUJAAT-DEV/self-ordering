@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plate -->
+  <ellipse cx="100" cy="170" rx="80" ry="25" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Cake base -->
+  <rect x="70" y="140" width="60" height="25" rx="3" fill="#92400e"/>
+  
+  <!-- Chocolate frosting -->
+  <path d="M70 140 Q75 135 85 138 Q95 135 105 138 Q115 135 125 138 Q130 140 130 145 L130 155 Q125 160 115 157 Q105 160 95 157 Q85 160 75 157 Q70 155 70 145 Z" fill="#451a03"/>
+  
+  <!-- Cake layers -->
+  <rect x="70" y="150" width="60" height="8" fill="#a16207"/>
+  <rect x="70" y="155" width="60" height="8" fill="#92400e"/>
+  
+  <!-- Chocolate drips -->
+  <path d="M75 140 Q77 145 75 150" stroke="#451a03" stroke-width="2" fill="none"/>
+  <path d="M85 138 Q87 143 85 148" stroke="#451a03" stroke-width="2" fill="none"/>
+  <path d="M95 135 Q97 140 95 145" stroke="#451a03" stroke-width="2" fill="none"/>
+  <path d="M105 138 Q107 143 105 148" stroke="#451a03" stroke-width="2" fill="none"/>
+  <path d="M115 135 Q117 140 115 145" stroke="#451a03" stroke-width="2" fill="none"/>
+  <path d="M125 138 Q127 143 125 148" stroke="#451a03" stroke-width="2" fill="none"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="85" cy="135" r="3" fill="#dc2626"/>
+  <circle cx="100" cy="133" r="3" fill="#dc2626"/>
+  <circle cx="115" cy="135" r="3" fill="#dc2626"/>
+  
+  <!-- Chocolate shavings -->
+  <path d="M90 130 Q92 128 94 130 Q92 132 90 130" fill="#7c2d12"/>
+  <path d="M105 128 Q107 126 109 128 Q107 130 105 128" fill="#7c2d12"/>
+  <path d="M98 125 Q100 123 102 125 Q100 127 98 125" fill="#7c2d12"/>
+  
+  <!-- Fork -->
+  <line x1="140" y1="150" x2="155" y2="155" stroke="#6b7280" stroke-width="2"/>
+  <line x1="153" y1="153" x2="153" y2="158" stroke="#6b7280" stroke-width="1"/>
+  <line x1="155" y1="152" x2="155" y2="157" stroke="#6b7280" stroke-width="1"/>
+  <line x1="157" y1="153" x2="157" y2="158" stroke="#6b7280" stroke-width="1"/>
+</svg>

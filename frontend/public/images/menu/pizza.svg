@@ -1,0 +1,48 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Plate -->
+  <ellipse cx="100" cy="170" rx="90" ry="25" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Pizza base (full circle) -->
+  <circle cx="100" cy="120" r="60" fill="#f59e0b"/>
+  
+  <!-- Pizza slice lines -->
+  <line x1="100" y1="60" x2="100" y2="180" stroke="#d97706" stroke-width="1" opacity="0.3"/>
+  <line x1="52" y1="104" x2="148" y2="136" stroke="#d97706" stroke-width="1" opacity="0.3"/>
+  <line x1="52" y1="136" x2="148" y2="104" stroke="#d97706" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="70" x2="130" y2="170" stroke="#d97706" stroke-width="1" opacity="0.3"/>
+  <line x1="130" y1="70" x2="70" y2="170" stroke="#d97706" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Tomato sauce -->
+  <circle cx="100" cy="120" r="55" fill="#dc2626"/>
+  
+  <!-- Mozzarella cheese -->
+  <circle cx="85" cy="105" r="8" fill="#fef3c7"/>
+  <circle cx="115" cy="110" r="10" fill="#ffffff"/>
+  <circle cx="90" cy="135" r="9" fill="#fde68a"/>
+  <circle cx="120" cy="140" r="7" fill="#fef3c7"/>
+  <circle cx="105" cy="95" r="6" fill="#ffffff"/>
+  <circle cx="75" cy="125" r="8" fill="#fde68a"/>
+  <circle cx="125" cy="115" r="9" fill="#ffffff"/>
+  <circle cx="100" cy="145" r="7" fill="#fef3c7"/>
+  <circle cx="110" cy="130" r="6" fill="#ffffff"/>
+  
+  <!-- Basil leaves -->
+  <ellipse cx="90" cy="115" rx="4" ry="6" fill="#16a34a" transform="rotate(30 90 115)"/>
+  <ellipse cx="110" cy="125" rx="4" ry="6" fill="#22c55e" transform="rotate(-20 110 125)"/>
+  <ellipse cx="95" cy="140" rx="4" ry="6" fill="#16a34a" transform="rotate(45 95 140)"/>
+  <ellipse cx="115" cy="105" rx="4" ry="6" fill="#22c55e" transform="rotate(60 115 105)"/>
+  <ellipse cx="85" cy="130" rx="4" ry="6" fill="#16a34a" transform="rotate(10 85 130)"/>
+  
+  <!-- Crust -->
+  <circle cx="100" cy="120" r="60" fill="none" stroke="#d97706" stroke-width="8"/>
+  
+  <!-- Crust texture -->
+  <circle cx="55" cy="90" r="2" fill="#f59e0b"/>
+  <circle cx="145" cy="95" r="2" fill="#f59e0b"/>
+  <circle cx="50" cy="140" r="2" fill="#f59e0b"/>
+  <circle cx="150" cy="145" r="2" fill="#f59e0b"/>
+  <circle cx="75" cy="65" r="2" fill="#f59e0b"/>
+  <circle cx="125" cy="68" r="2" fill="#f59e0b"/>
+  <circle cx="85" cy="175" r="2" fill="#f59e0b"/>
+  <circle cx="115" cy="172" r="2" fill="#f59e0b"/>
+</svg>
