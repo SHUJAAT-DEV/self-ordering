@@ -61,21 +61,42 @@ export default function WaiterApp() {
   const [currentOrder, setCurrentOrder] = useState<CurrentOrder | null>(null);
   const { toast } = useToast();
 
-  // SSE for real-time updates
-  useSSE("/api/events", (data) => {
-    if (data.type === "table_updated" || data.type === "order_updated" || data.type === "order_created") {
-      queryClient.invalidateQueries({ queryKey: ["/api/tables"] });
-      queryClient.invalidateQueries({ queryKey: ["/api/orders"] });
-    }
-  });
+  // SSE for real-time updates - temporarily disabled for debugging
+  // useSSE("/events", (data) => {
+  //   if (data.type === "table_updated" || data.type === "order_updated" || data.type === "order_created") {
+  //     queryClient.invalidateQueries({ queryKey: ["/tables"] });
+  //     queryClient.invalidateQueries({ queryKey: ["/orders"] });
+  //   }
+  // });
 
   // Queries
-  const { data: tables = [], isLoading: tablesLoading } = useQuery<Table[]>({
-    queryKey: ["/api/tables"],
+  const { 
+    data: tables = [], 
+    isLoading: tablesLoading, 
+    error: tablesError,
+    isSuccess: tablesSuccess,
+    isFetching: tablesFetching 
+  } = useQuery<Table[]>({
+    queryKey: ["/tables"],
+    staleTime: 0, // Force fresh fetch
+    refetchOnWindowFocus: true,
+    retry: 1,
   });
 
+  console.log("=== TABLES QUERY DEBUG ===");
+  console.log("tables data:", tables);
+  console.log("tables loading:", tablesLoading);
+  console.log("tables fetching:", tablesFetching);
+  console.log("tables success:", tablesSuccess);
+  console.log("tables error:", tablesError);
+  console.log("query key:", ["/tables"]);
+  console.log("data type:", typeof tables);
+  console.log("data is array:", Array.isArray(tables));
+  console.log("data length:", tables?.length);
+  console.log("=========================");
+
   const { data: menuItems = [], isLoading: menuLoading } = useQuery<MenuItem[]>({
-    queryKey: ["/api/menu-items"],
+    queryKey: ["/menu-items"],
   });
 
   // Mutations
@@ -96,9 +117,9 @@ export default function WaiterApp() {
         selectedSubcategory: null,
       });
       // Force refresh of tables and orders data
-      queryClient.invalidateQueries({ queryKey: ["/api/tables"] });
-      queryClient.invalidateQueries({ queryKey: ["/api/orders"] });
-      queryClient.refetchQueries({ queryKey: ["/api/tables"] });
+      queryClient.invalidateQueries({ queryKey: ["/tables"] });
+      queryClient.invalidateQueries({ queryKey: ["/orders"] });
+      queryClient.refetchQueries({ queryKey: ["/tables"] });
     },
     onError: () => {
       toast({
@@ -141,14 +162,7 @@ export default function WaiterApp() {
 
   // Query for existing orders when table is selected
   const { data: tableOrders = [], isLoading: ordersLoading } = useQuery({
-    queryKey: ['/api/orders', navigation.selectedTable?.id],
-    queryFn: async () => {
-      if (!navigation.selectedTable) return [];
-      const response = await fetch(`/api/orders?tableId=${navigation.selectedTable.id}`, {
-        credentials: 'include',
-      });
-      return response.json();
-    },
+    queryKey: [`/orders?tableId=${navigation.selectedTable?.id}`],
     enabled: !!navigation.selectedTable,
   });
 
@@ -379,9 +393,7 @@ export default function WaiterApp() {
     try {
       if (currentOrder.existingOrderId) {
         // Editing existing order - add new items only
-        const response = await fetch(`/api/orders/${currentOrder.existingOrderId}`, {
-          credentials: 'include'
-        });
+        const response = await apiRequest('GET', `/api/orders/${currentOrder.existingOrderId}`);
         const existingOrder = await response.json();
         
         // Find new items that weren't in the original order
@@ -427,7 +439,7 @@ export default function WaiterApp() {
       }
 
       // Refresh orders data
-      queryClient.invalidateQueries({ queryKey: ['/api/orders'] });
+      queryClient.invalidateQueries({ queryKey: ['/orders'] });
     } catch (error) {
       console.error("Failed to submit order:", error);
     }

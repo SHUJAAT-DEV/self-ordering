@@ -16,35 +16,23 @@ export default function KitchenApp() {
   const { toast } = useToast();
 
   // SSE for real-time updates
-  useSSE("/api/events", (data) => {
+  useSSE("/events", (data) => {
     if (data.type === "order_created" || data.type === "order_updated") {
-      queryClient.invalidateQueries({ queryKey: ["/api/orders"] });
+      queryClient.invalidateQueries({ queryKey: ["/orders"] });
     }
   });
 
   // Queries
   const { data: pendingOrders = [], isLoading: pendingLoading } = useQuery<OrderWithItems[]>({
-    queryKey: ["/api/orders", "pending"],
-    queryFn: () =>
-      fetch("/api/orders?status=pending", {
-        credentials: "include",
-      }).then((res) => res.json()),
+    queryKey: ["/orders?status=pending"],
   });
 
   const { data: cookingOrders = [], isLoading: cookingLoading } = useQuery<OrderWithItems[]>({
-    queryKey: ["/api/orders", "cooking"],
-    queryFn: () =>
-      fetch("/api/orders?status=cooking", {
-        credentials: "include",
-      }).then((res) => res.json()),
+    queryKey: ["/orders?status=cooking"],
   });
 
   const { data: readyOrders = [], isLoading: readyLoading } = useQuery<OrderWithItems[]>({
-    queryKey: ["/api/orders", "ready"],
-    queryFn: () =>
-      fetch("/api/orders?status=ready", {
-        credentials: "include",
-      }).then((res) => res.json()),
+    queryKey: ["/orders?status=ready"],
   });
 
   // Mutations
@@ -53,7 +41,7 @@ export default function KitchenApp() {
       return await apiRequest("PATCH", `/api/orders/${orderId}/status`, { status });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/orders"] });
+      queryClient.invalidateQueries({ queryKey: ["/orders"] });
     },
     onError: () => {
       toast({

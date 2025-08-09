@@ -1,6 +1,7 @@
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
+import { getApiBaseUrl } from "./config";
 
-const BASE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+const BASE_API_URL = getApiBaseUrl();
 
 function withBaseUrl(url: string): string {
   if (url.startsWith('http://') || url.startsWith('https://')) return url;

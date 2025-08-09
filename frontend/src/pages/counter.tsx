@@ -15,36 +15,24 @@ export default function CounterApp() {
   const { toast } = useToast();
 
   // SSE for real-time updates
-  useSSE("/api/events", (data) => {
+  useSSE("/events", (data) => {
     if (data.type === "order_updated") {
-      queryClient.invalidateQueries({ queryKey: ["/api/orders"] });
-      queryClient.invalidateQueries({ queryKey: ["/api/analytics"] });
+      queryClient.invalidateQueries({ queryKey: ["/orders"] });
+      queryClient.invalidateQueries({ queryKey: ["/analytics"] });
     }
   });
 
   // Queries
   const { data: readyOrders = [], isLoading: readyLoading } = useQuery<OrderWithItems[]>({
-    queryKey: ["/api/orders", "ready"],
-    queryFn: () =>
-      fetch("/api/orders?status=ready", {
-        credentials: "include",
-      }).then((res) => res.json()),
+    queryKey: ["/orders?status=ready"],
   });
 
   const { data: recentPayments = [], isLoading: paymentsLoading } = useQuery<OrderWithItems[]>({
-    queryKey: ["/api/orders", "paid"],
-    queryFn: () =>
-      fetch("/api/orders?status=paid", {
-        credentials: "include",
-      }).then((res) => res.json()),
+    queryKey: ["/orders?status=paid"],
   });
 
   const { data: dailySummary, isLoading: summaryLoading } = useQuery<OrderSummary>({
-    queryKey: ["/api/analytics", "daily-summary"],
-    queryFn: () =>
-      fetch("/api/analytics/daily-summary", {
-        credentials: "include",
-      }).then((res) => res.json()),
+    queryKey: ["/analytics/daily-summary"],
   });
 
   // Mutations
@@ -53,8 +41,8 @@ export default function CounterApp() {
       return await apiRequest("PATCH", `/api/orders/${orderId}/status`, { status });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/orders"] });
-      queryClient.invalidateQueries({ queryKey: ["/api/analytics"] });
+      queryClient.invalidateQueries({ queryKey: ["/orders"] });
+      queryClient.invalidateQueries({ queryKey: ["/analytics"] });
     },
     onError: () => {
       toast({
